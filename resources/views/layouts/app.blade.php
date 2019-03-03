@@ -75,13 +75,21 @@
           <main class="container py-4">
               <div class="row">
                 <div class="col-md-4">
-                    <ul class="list-group">
-                      @foreach($channels as $channel)
-                        <li class="list-group-item">
-                          {{ $channel->name }}
-                        </li>
-                      @endforeach
-                    </ul>
+                    <a href="{{ route('discussions.create') }}" style="width: 100%; color: #fff" class="btn btn-info my-2">Add Discussion</a>
+                    <div class="card">
+                      <div class="card-header">
+                        Channels
+                      </div>
+                      <div class="card-body">
+                          <ul class="list-group">
+                            @foreach($channels as $channel)
+                              <li class="list-group-item">
+                                {{ $channel->name }}
+                              </li>
+                            @endforeach
+                          </ul>
+                      </div>
+                    </div>
                 </div>
 
                 <div class="col-md-8">
