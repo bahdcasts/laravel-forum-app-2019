@@ -12,7 +12,7 @@ class DiscussionsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->only(['create', 'store']);
+        $this->middleware(['auth', 'verified'])->only(['create', 'store']);
     }
 
     /**
