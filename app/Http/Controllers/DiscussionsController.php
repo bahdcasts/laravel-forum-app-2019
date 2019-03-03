@@ -14,6 +14,7 @@ class DiscussionsController extends Controller
     {
         $this->middleware('auth')->only(['create', 'store']);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +23,7 @@ class DiscussionsController extends Controller
     public function index()
     {
         return view('discussions.index', [
-          'discussions' => Discussion::paginate(5)
+          'discussions' => Discussion::filterByChannels()->paginate(3)
         ]);
     }
 
