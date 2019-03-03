@@ -3,7 +3,7 @@
 @section('content')
 
 @foreach($discussions as $discussion)
-  <div class="card">
+  <div class="card mb-4">
       @include('partials.discussion-header')
 
       <div class="card-body">
